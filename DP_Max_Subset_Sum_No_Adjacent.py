@@ -9,15 +9,15 @@
 
 def maxSubsetSumNoAdjacent(array):
   if not len(array):
-		return 0
-	if len(array) == 1:
-		return array[0]
-	if len(array) == 2:
-		return array[1]
-	first = array[0]
-	second = max(array[0], array[1])
-	for i in range(2, len(array)):
-		maxSums = max(first + array[i], second)
-		first = second
-		second = maxSums
-	return maxSums
+	return 0
+  if len(array) == 1:
+	return array[0]
+  if len(array) == 2:
+	return array[1]
+  first = array[0]
+  second = max(array[0], array[1])
+  for i in range(2, len(array)):
+  	maxSums = max(first + array[i], second)
+	first = second
+	second = maxSums
+  return maxSums
